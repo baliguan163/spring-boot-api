@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.company.project.dao.YangxianNewMapper">
+  <resultMap id="BaseResultMap" type="com.company.project.model.YangxianNew">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="source_in" jdbcType="VARCHAR" property="sourceIn" />
+    <result column="public_time" jdbcType="TIMESTAMP" property="publicTime" />
+    <result column="auth" jdbcType="VARCHAR" property="auth" />
+    <result column="edit" jdbcType="VARCHAR" property="edit" />
+    <result column="url" jdbcType="VARCHAR" property="url" />
+    <result column="img_list" jdbcType="VARCHAR" property="imgList" />
+    <result column="date_time" jdbcType="TIMESTAMP" property="dateTime" />
+    <result column="content" jdbcType="LONGVARCHAR" property="content" />
+  </resultMap>
+</mapper>

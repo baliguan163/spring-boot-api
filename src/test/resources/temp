@@ -1,0 +1,24 @@
+    @PostMapping("/detail")
+    public Result detail(@RequestParam(value = "id", required = true) Integer id) {
+        BaliguanNews baliguanNews = baliguanNewsService.findById(id);
+        if(baliguanNews != null)
+        {
+            return ResultGenerator.genSuccessResult(baliguanNews);
+        }
+        else
+        {
+            return ResultGenerator.genFailResult("数据不存在，获取详情失败");
+        }
+    }
+
+    @PostMapping("/list")
+    public Result list(@RequestParam(defaultValue = "0") Integer page, @RequestParam(defaultValue = "0") Integer size) {
+        PageHelper.startPage(page, size);
+//        List<BaliguanNews> list = baliguanNewsService.findAll();
+        //设置降序
+        Condition condition = new Condition(BaliguanNews.class);
+        condition.orderBy("newDate").desc();
+        List<BaliguanNews>  list = baliguanNewsService.findByCondition(condition);
+        PageInfo pageInfo = new PageInfo(list);
+        return ResultGenerator.genSuccessResult(pageInfo);
+    }
