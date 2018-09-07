@@ -18,7 +18,7 @@ import static com.company.project.core.ProjectConstant.*;
  */
 public class CodeGenerator {
     //JDBC配置，请修改为你项目的实际配置
-    private static final String JDBC_URL = "jdbc:mysql://127.0.0.1:3306/info";
+    private static final String JDBC_URL = "jdbc:mysql://127.0.0.1:3306/test";
     private static final String JDBC_USERNAME = "root";
     private static final String JDBC_PASSWORD = "123456";
     private static final String JDBC_DIVER_CLASS_NAME = "com.mysql.jdbc.Driver";
@@ -40,8 +40,8 @@ public class CodeGenerator {
 //        genCode("tian_mao_goods");
 //        genCode("yangxian_new");
 //        genCode("baliguan_news");
-//          genCode("mntu92");
-        //genCodeByCustomModelName("输入表名","输入自定义Model名称");
+//        genCode("mntu92");
+//        genCodeByCustomModelName("输入表名","输入自定义Model名称");
     }
 
     /**
@@ -150,8 +150,7 @@ public class CodeGenerator {
             if (!file.getParentFile().exists()) {
                 file.getParentFile().mkdirs();
             }
-            cfg.getTemplate("service.ftl").process(data,
-                    new FileWriter(file));
+            cfg.getTemplate("service.ftl").process(data, new FileWriter(file));
             System.out.println(modelNameUpperCamel + "Service.java 生成成功");
 
             File file1 = new File(PROJECT_PATH + JAVA_PATH + PACKAGE_PATH_SERVICE_IMPL + modelNameUpperCamel + "ServiceImpl.java");
