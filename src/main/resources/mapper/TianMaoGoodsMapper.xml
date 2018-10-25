@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.company.project.dao.TianMaoGoodsMapper">
+  <resultMap id="BaseResultMap" type="com.company.project.model.TianMaoGoods">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="goods_1_category" jdbcType="VARCHAR" property="goods1Category" />
+    <result column="shop_name" jdbcType="VARCHAR" property="shopName" />
+    <result column="platform_type" jdbcType="VARCHAR" property="platformType" />
+    <result column="goods_id" jdbcType="VARCHAR" property="goodsId" />
+    <result column="goods_name" jdbcType="VARCHAR" property="goodsName" />
+    <result column="goods_url" jdbcType="VARCHAR" property="goodsUrl" />
+    <result column="goods_pic_url" jdbcType="VARCHAR" property="goodsPicUrl" />
+    <result column="goods_price" jdbcType="VARCHAR" property="goodsPrice" />
+    <result column="income_rate" jdbcType="VARCHAR" property="incomeRate" />
+    <result column="sale_date" jdbcType="VARCHAR" property="saleDate" />
+    <result column="denomination" jdbcType="VARCHAR" property="denomination" />
+    <result column="discount_coupon_price" jdbcType="VARCHAR" property="discountCouponPrice" />
+    <result column="discount_coupon_sum" jdbcType="VARCHAR" property="discountCouponSum" />
+    <result column="discount_coupon_residue" jdbcType="VARCHAR" property="discountCouponResidue" />
+    <result column="discount_coupon_begin_date" jdbcType="VARCHAR" property="discountCouponBeginDate" />
+    <result column="discount_coupon_end_date" jdbcType="VARCHAR" property="discountCouponEndDate" />
+    <result column="generalize_url" jdbcType="VARCHAR" property="generalizeUrl" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+  </resultMap>
+</mapper>
