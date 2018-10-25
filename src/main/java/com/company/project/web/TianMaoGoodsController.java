@@ -43,7 +43,7 @@ public class TianMaoGoodsController {
         TianMaoGoods tianMaoGoods = tianMaoGoodsService.findById(id);
         return ResultGenerator.genSuccessResult(tianMaoGoods);
     }
-
+//     测试
     @GetMapping
     public Result list(@RequestParam(defaultValue = "0") Integer page, @RequestParam(defaultValue = "0") Integer size) {
         PageHelper.startPage(page, size);
